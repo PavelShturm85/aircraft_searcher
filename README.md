@@ -10,6 +10,8 @@ $ sudo apt-get install virtualenv
 $ cd path/to/current/dir
 $ virtualenv .env
 $ pip install -e /path/to/repository/aircraft_searcher
+```
+
 ### Dependencies of packages
 
 * You have to install opensky-api in virtualenv:  `https://opensky-network.org/apidoc`, before use aircraft list.
@@ -19,7 +21,7 @@ $ pip install -e /path/to/repository/aircraft_searcher
 
 ### Example
 
-* without parameters, the coordinates of Brussels are used.
+* without parameters, the coordinates of Brussels are used with range 200km.
 ```
 from aircraft_list import AircraftSearcher
 

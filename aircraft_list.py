@@ -12,6 +12,15 @@ class AircraftSearcher():
                  coordinates_min_longitude=(50.819441, 4.244614),
                  coordinates_max_longitude=(50.792942, 4.482057)):
 
+        coordinat_tuple = (coordinates_min_latitude, coordinates_max_latitude,
+                           coordinates_min_longitude, coordinates_max_longitude)
+        for latitude, longitude in coordinat_tuple:
+            if latitude > 90 or latitude < -90 or longitude > 180 or longitude < -180:
+                raise ValueError
+
+        if km > 12742:
+            raise ValueError
+
         self._min_latitude, self._ = coordinates_min_latitude
         self._max_latitude, self._ = coordinates_max_latitude
         self._latitude_on_min_longitude, self._min_longitude = coordinates_min_longitude

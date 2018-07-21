@@ -9,8 +9,8 @@ class TestAircraftList(unittest.TestCase):
             200, (50.0, 4.0), (50.0, 4.0), (50.0, 4.0), (50.0, 4.0))
         self.B = AircraftSearcher(200.1, (50, 4), (50, 4), (50, 4), (50, 4))
         self.C = AircraftSearcher(0, (0, 0), (0, 0), (0, 0), (0, 0))
-        self.D = AircraftSearcher(2000, (180, -90), (-180, 90), (180, -90), (-180, 90))
-        self.E = AircraftSearcher(-2000, (280, -110), (-280, 190), (380, -190), (-280, 190))
+        self.D = AircraftSearcher(2000, (90, -180), (-90, 180), (90, -180), (-90, 180))
+        self.E = AircraftSearcher(-20000, (280, -190), (-280, 190), (380, -190), (-280, 190))
         self.object_list = [self.A, self.B, self.C, self.D, self.E ]
 
     def test_init(self):
